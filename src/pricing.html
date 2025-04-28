@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body >
+    <nav id="bottom-nav" class="fixed max-w-7xl mx-auto top-0 left-0 right-0 z-50 bg-white shadow-md py-3 px-4 flex items-center justify-between">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <img src="https://i.ibb.co/XpVkRdh/logo.png" alt="CCPL Logo" class="h-8 md:h-10">
+        </div>
+      
+        <!-- Menu Items (Desktop) -->
+        <div class="hidden md:flex space-x-6 font-semibold text-gray-700 items-center relative">
+          <a href="./index.html" class="hover:text-yellow-500">Home</a>
+      
+          <!-- Offerings (Desktop) -->
+          <div class="relative">
+            <button id="desktop-offerings-toggle" class="flex items-center space-x-1 hover:text-yellow-500 focus:outline-none">
+              <span>Offerings</span>
+              <i class="fas fa-chevron-down text-xs"></i>
+            </button>
+            <div id="desktop-offerings-menu" class="hidden absolute left-0 mt-2 w-60 bg-white shadow-md py-4 px-4 space-y-2 rounded-md">
+              <a href="#" class="block hover:text-yellow-500">Clipping Path</a>
+              <a href="#" class="block hover:text-yellow-500">Multi Path</a>
+              <a href="#" class="block hover:text-yellow-500">Image Masking</a>
+              <a href="#" class="block hover:text-yellow-500">Photo Editing</a>
+              <a href="#" class="block hover:text-yellow-500">3D Modeling</a>
+              <a href="#" class="block hover:text-yellow-500">Retouching</a>
+              <a href="#" class="block hover:text-yellow-500">Shadow Creation</a>
+              <a href="#" class="block hover:text-yellow-500">Background Removal</a>
+            </div>
+          </div>
+      
+          <a href="#" class="hover:text-yellow-500">Pricing</a>
+          <a href="#" class="hover:text-yellow-500">About</a>
+          <a href="#" class="hover:text-yellow-500">Blog</a>
+          <a href="#" class="hover:text-yellow-500">Contact</a>
+        </div>
+      
+        <!-- Free Trial Button (Desktop) -->
+        <button class="hidden md:block bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded-full shadow-lg">
+          Free Trial
+        </button>
+      
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </nav>
+      
+    <!-- Mobile Menu (Optional, আগের মতোই রাখতে পারো) -->
+    <div id="mobile-menu" class="hidden fixed top-16 left-0 right-0 bg-white shadow-md z-40 flex flex-col space-y-4 py-4 px-6 text-gray-700 font-semibold">
+        <a href="./index.html" class="hover:text-yellow-500">Home</a>
+      
+        <!-- Offerings (Mobile) -->
+        <div class="relative">
+          <button id="mobile-offerings-toggle" class="flex items-center space-x-1 hover:text-yellow-500 focus:outline-none">
+            <span>Offerings</span>
+            <i class="fas fa-chevron-down text-xs"></i>
+          </button>
+          <div id="mobile-offerings-menu" class="hidden mt-2 flex flex-col space-y-2 bg-white shadow-md p-4 rounded-md">
+            <a href="#" class="hover:text-yellow-500">Clipping Path</a>
+            <a href="#" class="hover:text-yellow-500">Multi Path</a>
+            <a href="#" class="hover:text-yellow-500">Image Masking</a>
+            <a href="#" class="hover:text-yellow-500">Photo Editing</a>
+            <a href="#" class="hover:text-yellow-500">3D Modeling</a>
+            <a href="#" class="hover:text-yellow-500">Retouching</a>
+            <a href="#" class="hover:text-yellow-500">Shadow Creation</a>
+            <a href="#" class="hover:text-yellow-500">Background Removal</a>
+          </div>
+        </div>
+      
+        <a href="#" class="hover:text-yellow-500">Pricing</a>
+        <a href="#" class="hover:text-yellow-500">About</a>
+        <a href="#" class="hover:text-yellow-500">Blog</a>
+        <a href="#" class="hover:text-yellow-500">Contact</a>
+      </div>
+      <div class=" py-16   ">
+        <div class="max-w-7xl mx-auto px-4 mt-24 ">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+            <!-- Basic Plan -->
+            <div class=" bg-gradient-to-r from-purple-500 to-indigo-600  rounded-3xl shadow-xl p-10 flex flex-col items-center text-center hover:scale-105 transition duration-300 min-h-[500px]">
+              <h2 class="text-3xl font-bold text-white mb-4">Basic</h2>
+              <p class="text-white/80 mb-6">Ideal for small projects</p>
+              <h3 class="text-5xl font-extrabold text-white mb-8">$99<span class="text-2xl font-medium text-white/70">/mo</span></h3>
+              <ul class="space-y-4 mb-10 text-white text-lg">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-green-300"></i> 50 Images</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-green-300"></i> Background Removal</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-green-300"></i> Standard Delivery</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-green-300"></i> Free Revisions</li>
+              </ul>
+              <button class="w-full bg-white hover:bg-purple-200 text-purple-700 font-bold py-3 rounded-full">Get Started</button>
+            </div>
+      
+            <!-- Pro Plan -->
+            <div class="   bg-gradient-to-r from-purple-500 to-indigo-600 rounded-3xl shadow-2xl p-10 flex flex-col items-center text-center hover:scale-105 transition duration-300 min-h-[500px] relative">
+              <span class="absolute top-4 right-4 bg-white text-blue-700 text-xs font-bold px-4 py-1 rounded-full">Best Value</span>
+              <h2 class="text-3xl font-bold text-white mb-4">Pro</h2>
+              <p class="text-white/80 mb-6">Perfect for professionals</p>
+              <h3 class="text-5xl font-extrabold text-white mb-8">$249<span class="text-2xl font-medium text-white/70">/qtr</span></h3>
+              <ul class="space-y-4 mb-10 text-white text-lg">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-green-300"></i> 200 Images</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-green-300"></i> Retouch Included</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-green-300"></i> Priority Support</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-green-300"></i> Unlimited Revisions</li>
+              </ul>
+              <button class="w-full bg-white hover:bg-blue-200 text-blue-700 font-bold py-3 rounded-full">Get Started</button>
+            </div>
+      
+            <!-- Enterprise Plan -->
+            <div class=" bg-gradient-to-r from-purple-500 to-indigo-600 rounded-3xl shadow-xl p-10 flex flex-col items-center text-center hover:scale-105 transition duration-300 min-h-[500px]">
+              <h2 class="text-3xl font-bold text-white mb-4">Enterprise</h2>
+              <p class="text-white/80 mb-6">Best for businesses</p>
+              <h3 class="text-5xl font-extrabold text-white mb-8">$799<span class="text-2xl font-medium text-white/70">/yr</span></h3>
+              <ul class="space-y-4 mb-10 text-white text-lg">
+                <li class="flex items-center gap-2"><i class="fas fa-check text-green-300"></i> 1000+ Images</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-green-300"></i> All Services</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-green-300"></i> Account Manager</li>
+                <li class="flex items-center gap-2"><i class="fas fa-check text-green-300"></i> Unlimited Revisions</li>
+              </ul>
+              <button class="w-full bg-white hover:bg-pink-200 text-pink-700 font-bold py-3 rounded-full">Get Started</button>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+      
+      
+      
+  <footer class="bg-gray-100">
+    <!-- Main Footer Content -->
+    <div class="container mx-auto px-4 py-12 mt-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- About Us Section -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-red-500 pb-2 inline-block">ABOUT US</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Creative Clipping Path is a professional Graphics Design, Image Editing, Video Post-Production, 3D Modeling services provider located in Southeast Asia. Our company has more than 400+ Photo Manipulation Artists (PMAs) working in 3 different shifts, 24 hours a day. Creative Clipping Path provides quality image editing services set to meet the worldwide professional standards.
+                </p>
+                <a href="#" class="text-blue-500 hover:text-blue-700 font-medium flex items-center">
+                    Read more <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-red-500 pb-2 inline-block">QUICK LINKS</h2>
+                <ul class="space-y-2">
+                    <li><a href="#" class="quick-link text-gray-600 hover:text-red-500 flex items-center"><i class="fas fa-home mr-2"></i> HOME</a></li>
+                    <li><a href="#" class="quick-link text-gray-600 hover:text-red-500 flex items-center"><i class="fas fa-image mr-2"></i> IMAGE POST</a></li>
+                    <li><a href="#" class="quick-link text-gray-600 hover:text-red-500 flex items-center"><i class="fas fa-video mr-2"></i> VIDEO POST</a></li>
+                    <li><a href="#" class="quick-link text-gray-600 hover:text-red-500 flex items-center"><i class="fas fa-cube mr-2"></i> 3D MODELING</a></li>
+                    <li><a href="#" class="quick-link text-gray-600 hover:text-red-500 flex items-center"><i class="fas fa-tag mr-2"></i> PRICE</a></li>
+                    <li><a href="#" class="quick-link text-gray-600 hover:text-red-500 flex items-center"><i class="fas fa-gift mr-2"></i> FREE TRIAL</a></li>
+                    <li><a href="#" class="quick-link text-gray-600 hover:text-red-500 flex items-center"><i class="fas fa-building mr-2"></i> COMPANY</a></li>
+                    <li><a href="#" class="quick-link text-gray-600 hover:text-red-500 flex items-center"><i class="fas fa-cogs mr-2"></i> OTHER SERVICE</a></li>
+                    <li><a href="#" class="quick-link text-gray-600 hover:text-red-500 flex items-center"><i class="fas fa-blog mr-2"></i> BLOG</a></li>
+                    <li><a href="#" class="quick-link text-gray-600 hover:text-red-500 flex items-center"><i class="fas fa-envelope mr-2"></i> CONTACT</a></li>
+                </ul>
+            </div>
+
+            <!-- Connect Online Section -->
+            <div class="space-y-6">
+                <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-red-500 pb-2 inline-block">CONNECT ONLINE</h2>
+                
+                <!-- Social Media Icons -->
+                <div class="grid grid-cols-5 gap-4">
+                    <a href="#" class="social-icon bg-green-500 text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-green-600">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                    <a href="#" class="social-icon bg-blue-600 text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-700">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="social-icon bg-blue-500 text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-600">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="social-icon bg-sky-500 text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-sky-600">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="social-icon bg-red-600 text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-red-700">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="#" class="social-icon bg-sky-400 text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-sky-500">
+                        <i class="fab fa-skype text-xl"></i>
+                    </a>
+                    <a href="#" class="social-icon bg-blue-500 text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-blue-600">
+                        <i class="fab fa-facebook-messenger text-xl"></i>
+                    </a>
+                    <a href="#" class="social-icon bg-red-500 text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-red-600">
+                        <i class="fab fa-pinterest text-xl"></i>
+                    </a>
+                    <a href="#" class="social-icon bg-gradient-to-r from-purple-500 to-pink-500 text-white h-10 w-10 rounded-full flex items-center justify-center hover:from-purple-600 hover:to-pink-600">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="social-icon bg-red-500 text-white h-10 w-10 rounded-full flex items-center justify-center hover:bg-red-600">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+                
+                <!-- Payment Methods -->
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <div class="grid grid-cols-4 gap-3">
+                        <div class="payment-icon p-2 border rounded-md flex items-center justify-center">
+                            <i class="fas fa-university text-2xl text-gray-700"></i>
+                        </div>
+                        <div class="payment-icon p-2 border rounded-md flex items-center justify-center">
+                            <i class="fab fa-cc-visa text-2xl text-blue-600"></i>
+                        </div>
+                        <div class="payment-icon p-2 border rounded-md flex items-center justify-center">
+                            <i class="fab fa-cc-mastercard text-2xl text-red-500"></i>
+                        </div>
+                        <div class="payment-icon p-2 border rounded-md flex items-center justify-center">
+                            <i class="fab fa-cc-jcb text-2xl text-blue-800"></i>
+                        </div>
+                        <div class="payment-icon p-2 border rounded-md flex items-center justify-center">
+                            <i class="fab fa-cc-discover text-2xl text-orange-500"></i>
+                        </div>
+                        <div class="payment-icon p-2 border rounded-md flex items-center justify-center">
+                            <i class="fab fa-ebay text-2xl text-blue-500"></i>
+                        </div>
+                        <div class="payment-icon p-2 border rounded-md flex items-center justify-center">
+                            <i class="fab fa-cc-paypal text-2xl text-blue-700"></i>
+                        </div>
+                        <div class="payment-icon p-2 border rounded-md flex items-center justify-center">
+                            <i class="fas fa-money-bill-wave text-2xl text-green-600"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Get a Quote Button -->
+                <a href="#" class="bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-white font-bold py-3 px-6 rounded-full shadow-lg flex items-center justify-center transition duration-300 transform hover:scale-105">
+                    <i class="fas fa-quote-left mr-2"></i> Get a Quote
+                </a>
+            </div>
+
+            <!-- Our Other Concern Section -->
+            <div class="space-y-4">
+                <h2 class="text-2xl font-bold text-gray-700 border-b-2 border-red-500 pb-2 inline-block">OUR OTHER CONCERN</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-all">
+                        <div class="flex items-center justify-center h-16">
+                            <div class="text-center">
+                                <span class="text-red-500 font-bold">CREATIVE</span>
+                                <br />
+                                <span class="text-gray-700 text-sm">IT INSTITUTE</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-all">
+                        <div class="flex items-center justify-center h-16">
+                            <div class="text-center">
+                                <span class="text-yellow-500 font-bold">dMarkcy</span>
+                                <br />
+                                <span class="text-gray-700 text-sm">DIGITAL MARKETING</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-all">
+                        <div class="flex items-center justify-center h-16">
+                            <div class="text-center">
+                                <span class="text-gray-800 font-bold">Movreel</span>
+                                <br />
+                                <span class="text-gray-700 text-sm">STUDIO</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-all">
+                        <div class="flex items-center justify-center h-16">
+                            <div class="text-center">
+                                <span class="text-gray-800 font-bold">Piximo</span>
+                                <br />
+                                <span class="text-gray-700 text-sm">STUDIOS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg shadow-sm hover:shadow-md transition-all col-span-2">
+                        <div class="flex items-center justify-center h-16">
+                            <div class="text-center">
+                                <span class="text-blue-500 font-bold">desvert</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Address Section -->
+    <div class="bg-gray-200 py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- USA Address -->
+                <div class="address-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i> USA ADDRESS
+                    </h3>
+                    <p class="text-gray-500 mb-4">(Marketing & Support Center)</p>
+                    <div class="space-y-2 text-gray-600">
+                        <p>1654 S. Logan Pass, Andover</p>
+                        <p>Kansas 67002, USA</p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone-alt text-green-500 mr-2"></i> Contact: +1-847-502-2448
+                        </p>
+                    </div>
+                </div>
+
+                <!-- SWEDEN ADDRESS -->
+                <div class="address-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i> SWEDEN ADDRESS
+                    </h3>
+                    <p class="text-gray-500 mb-4">(Marketing & Support Center)</p>
+                    <div class="space-y-2 text-gray-600">
+                        <p>SKARABORGSVÄGEN 3B 506 30</p>
+                        <p>BORÅS, Sweden</p>
+                        <p class="flex items-center">
+                            <i class="fas fa-mobile-alt text-green-500 mr-2"></i> Cell: +460762640728
+                        </p>
+                    </div>
+                </div>
+
+                <!-- AUSTRALIA ADDRESS -->
+                <div class="address-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i> AUSTRALIA ADDRESS
+                    </h3>
+                    <p class="text-gray-500 mb-4">(Marketing & Support Center)</p>
+                    <div class="space-y-2 text-gray-600">
+                        <p>11 Seymour Terrace, Ascot Park,</p>
+                        <p>SA 5043, SA. Australia</p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone-alt text-green-500 mr-2"></i> Contact: +61 434451933
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Canada ADDRESS -->
+                <div class="address-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                        <i class="fas fa-map-marker-alt text-red-500 mr-2"></i> Canada ADDRESS
+                    </h3>
+                    <p class="text-gray-500 mb-4">(Marketing & Support Center)</p>
+                    <div class="space-y-2 text-gray-600">
+                        <p>Suite 1500, 701 West Georgia</p>
+                        <p>Street Vancouver, BC V7Y1C6</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bangladesh Office -->
+            <div class="mt-8">
+                <div class="address-card bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2 flex items-center">
+                        <i class="fas fa-building text-red-500 mr-2"></i> BANGLADESH OFFICE
+                    </h3>
+                    <p class="text-gray-500 mb-4">(Main Office)</p>
+                    <div class="space-y-2 text-gray-600">
+                        <p>Momtaz Plaza (3<sup>rd</sup>, 4<sup>th</sup> & 6<sup>th</sup> floor),</p>
+                        <p>House:07, Road:04,</p>
+                        <p>Dhanmondi, Dhaka</p>
+                        <p class="flex items-center">
+                            <i class="fas fa-mobile-alt text-green-500 mr-2"></i> Cell:+880 1990779776
+                        </p>
+                        <p class="flex items-center">
+                            <i class="fas fa-phone-alt text-green-500 mr-2"></i> Phone: 8802-9661152
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2023 Creative Clipping Path. All Rights Reserved.</p>
+            <div class="mt-2 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+                <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+                <a href="#" class="text-gray-400 hover:text-white">Cookie Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
